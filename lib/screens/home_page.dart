@@ -34,8 +34,11 @@ class HomePageState extends State<HomePage> {
                 // ),
                 Container(
                   color: Colors.greenAccent,
-                  width: 500.0,
+                  width: MediaQuery.of(context).size.width,
                   height: 100.0,
+                  child: Image.network(
+                      "https://live.staticflickr.com/65535/52115921898_f0b4ac0c08_n.jpg",
+                      fit: BoxFit.cover),
                 ),
                 Divider(),
                 Text(

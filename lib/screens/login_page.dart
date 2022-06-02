@@ -23,7 +23,14 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(color: Colors.greenAccent, width: 1000, height: 300),
+                Container(
+                  color: Colors.greenAccent,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.6,
+                  child: Image.network(
+                      "https://live.staticflickr.com/65535/52115918958_318c9a11e2_w.jpg",
+                      fit: BoxFit.cover),
+                ),
                 TextFormField(
                   controller: _email,
                   autofocus: true,
