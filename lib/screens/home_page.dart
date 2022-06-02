@@ -40,7 +40,7 @@ class HomePageState extends State<HomePage> {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.1,
                   child: Image.network(
-                      "https://live.staticflickr.com/65535/52115921898_f0b4ac0c08_n.jpg",
+                      "https://live.staticflickr.com/65535/52117124689_8a86183d92_b.jpg",
                       fit: BoxFit.cover),
                 ),
                 Divider(),

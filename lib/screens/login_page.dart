@@ -30,9 +30,9 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   color: Colors.greenAccent,
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.5,
+                  height: MediaQuery.of(context).size.height * 0.6,
                   child: Image.network(
-                      "https://live.staticflickr.com/65535/52115918958_318c9a11e2_w.jpg",
+                      "https://live.staticflickr.com/65535/52117372010_198d2036d9_b.jpg",
                       fit: BoxFit.cover),
                 ),
                 TextFormField(
@@ -44,7 +44,6 @@ class _LoginPageState extends State<LoginPage> {
                       labelText: "Email",
                       labelStyle: TextStyle(color: Colors.black)),
                 ),
-                Divider(),
                 TextFormField(
                   controller: _senha,
                   autofocus: true,
@@ -55,7 +54,6 @@ class _LoginPageState extends State<LoginPage> {
                       labelText: "Senha",
                       labelStyle: TextStyle(color: Colors.black)),
                 ),
-                Divider(),
                 Padding(
                     padding: EdgeInsets.only(top: 16.0),
                     child: SizedBox(
