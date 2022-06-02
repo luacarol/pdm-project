@@ -12,6 +12,10 @@ class DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Sistema Dados Ambientais - Energia Solar'),
+        backgroundColor: Color.fromRGBO(0, 0, 0, 1),
+      ),
       backgroundColor: Colors.white,
       body: Center(
           child: Padding(
@@ -20,103 +24,95 @@ class DetailsPageState extends State<DetailsPage> {
           Text(
             "Detalhes da Instalação",
             textAlign: TextAlign.left,
-            style: const TextStyle(fontWeight: FontWeight.w300, fontSize: 14),
+            style: const TextStyle(fontWeight: FontWeight.w300, fontSize: 20),
           ),
           Divider(),
           Container(
             color: Colors.greenAccent,
-            width: 400.0,
-            height: 50.0,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.1,
             child: Column(children: [
-              Text(
-                "Qualidade do ar",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
-              ),
-              Text(
-                "Boa",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-              ),
-            ]),
-          ),
-          Divider(),
-          Container(
-            color: Colors.greenAccent,
-            width: 400.0,
-            height: 50.0,
-            child: Column(children: [
-              Text(
-                "Temperatura",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
-              ),
-              Text(
-                "10°C",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-              ),
-            ]),
-          ),
-          Divider(),
-          Container(
-            color: Colors.greenAccent,
-            width: 400.0,
-            height: 50.0,
-            child: Column(children: [
-              Text(
-                "Pressão",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
-              ),
-              Text(
-                "1016 hPa",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-              ),
-            ]),
-          ),
-          Divider(),
-          Container(
-            color: Colors.greenAccent,
-            width: 400.0,
-            height: 50.0,
-            child: Column(children: [
-              Text(
-                "Incidencia Solar",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
-              ),
-              Text(
-                "3.20 Wm-2",
-                textAlign: TextAlign.left,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-              ),
-            ]),
-          ),
-          Divider(),
-          ButtonTheme(
-              height: 40.0,
-              child: RaisedButton(
-                onPressed: () => {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return HomePage();
-                  }))
-                },
-                child: Text(
-                  "Voltar",
-                  style: TextStyle(color: Colors.white, fontSize: 12),
+              ListTile(
+                title: Text('Qualidade do ar',
+                    style: TextStyle(fontWeight: FontWeight.w500)),
+                subtitle:
+                    Text('Boa', style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: Icon(
+                  Icons.yard_outlined,
+                  color: Colors.blue[500],
                 ),
-                color: Colors.black,
-              )),
+              ),
+            ]),
+          ),
+          Divider(),
+          Container(
+            color: Colors.greenAccent,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.1,
+            child: Column(children: [
+              ListTile(
+                title: Text('Temperatura',
+                    style: TextStyle(fontWeight: FontWeight.w500)),
+                subtitle: Text('10 °C',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: Icon(
+                  Icons.sunny,
+                  color: Colors.blue[500],
+                ),
+              )
+            ]),
+          ),
+          Divider(),
+          Container(
+            color: Colors.greenAccent,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.1,
+            child: Column(children: [
+              ListTile(
+                title: Text('Pressão',
+                    style: TextStyle(fontWeight: FontWeight.w500)),
+                subtitle: Text('1016 hPa',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: Icon(
+                  Icons.wb_cloudy_outlined,
+                  color: Colors.blue[500],
+                ),
+              ),
+            ]),
+          ),
+          Divider(),
+          Container(
+            color: Colors.greenAccent,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.1,
+            child: Column(children: [
+              ListTile(
+                title: Text('Incidência Solar',
+                    style: TextStyle(fontWeight: FontWeight.w500)),
+                subtitle: Text('3.20 Wm-2',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: Icon(
+                  Icons.lightbulb_outline,
+                  color: Colors.blue[500],
+                ),
+              ),
+            ]),
+          ),
+          Divider(),
+          // ButtonTheme(
+          //     height: 40.0,
+          //     child: RaisedButton(
+          //       onPressed: () => {
+          //         Navigator.push(context, MaterialPageRoute(builder: (context) {
+          //           return HomePage();
+          //         }))
+          //       },
+          //       child: Text(
+          //         "Voltar",
+          //         style: TextStyle(color: Colors.white, fontSize: 12),
+          //       ),
+          //       color: Colors.black,
+          //     )),
         ]),
       )),
     );

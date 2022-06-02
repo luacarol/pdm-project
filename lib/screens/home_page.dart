@@ -12,6 +12,9 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: Text('Sistema Dados Ambientais - Energia Solar'),
+          backgroundColor: Color.fromRGBO(0, 0, 0, 1)),
       backgroundColor: Colors.white,
       body: Center(
         child: Padding(
@@ -23,7 +26,7 @@ class HomePageState extends State<HomePage> {
                   "Instalação",
                   textAlign: TextAlign.left,
                   style: const TextStyle(
-                      fontWeight: FontWeight.w300, fontSize: 14),
+                      fontWeight: FontWeight.w300, fontSize: 20),
                 ),
                 Divider(),
                 // Image.asset(
@@ -35,46 +38,44 @@ class HomePageState extends State<HomePage> {
                 Container(
                   color: Colors.greenAccent,
                   width: MediaQuery.of(context).size.width,
-                  height: 100.0,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   child: Image.network(
                       "https://live.staticflickr.com/65535/52115921898_f0b4ac0c08_n.jpg",
                       fit: BoxFit.cover),
                 ),
                 Divider(),
-                Text(
-                  "3.20kWh",
-                  textAlign: TextAlign.left,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 12),
-                ),
-                Text(
-                  "Produção Diária",
-                  textAlign: TextAlign.left,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w100, fontSize: 10),
-                ),
                 Container(
                   color: Colors.greenAccent,
-                  width: 400.0,
-                  height: 200.0,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.2,
+                  child: Column(children: [
+                    ListTile(
+                      title: Text('3.20 kWh',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text('Produção Diária'),
+                      leading: Icon(
+                        Icons.energy_savings_leaf_outlined,
+                        color: Colors.blue[500],
+                      ),
+                    ),
+                  ]),
                 ),
                 Divider(),
-                Text(
-                  "3.52 BRL",
-                  textAlign: TextAlign.left,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 12),
-                ),
-                Text(
-                  "Rendimento Diário",
-                  textAlign: TextAlign.left,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w100, fontSize: 10),
-                ),
                 Container(
                   color: Colors.greenAccent,
-                  width: 400.0,
-                  height: 200.0,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.2,
+                  child: Column(children: [
+                    ListTile(
+                      title: Text('3.52 BRL',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      subtitle: Text('Rendimento Diário'),
+                      leading: Icon(
+                        Icons.monetization_on_outlined,
+                        color: Colors.blue[500],
+                      ),
+                    ),
+                  ]),
                 ),
                 Divider(),
                 ButtonTheme(
@@ -88,7 +89,7 @@ class HomePageState extends State<HomePage> {
                       },
                       child: Text(
                         "Ver mais detalhes",
-                        style: TextStyle(color: Colors.white, fontSize: 12),
+                        style: TextStyle(color: Colors.white, fontSize: 13),
                       ),
                       color: Colors.black,
                     )),

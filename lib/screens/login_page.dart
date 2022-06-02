@@ -14,10 +14,14 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Sistema Dados Ambientais - Energia Solar'),
+        backgroundColor: Color.fromRGBO(0, 0, 0, 1),
+      ),
       backgroundColor: Colors.white,
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(10),
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -26,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   color: Colors.greenAccent,
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.6,
+                  height: MediaQuery.of(context).size.height * 0.5,
                   child: Image.network(
                       "https://live.staticflickr.com/65535/52115918958_318c9a11e2_w.jpg",
                       fit: BoxFit.cover),
